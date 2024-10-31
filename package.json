@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
