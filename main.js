@@ -8,21 +8,24 @@ function createView() {
 
     view.style.minWidth = '300px';
     view.style.width = '90vw';
+    view.style.maxHeight = '280px';
     view.style.height = 'auto';
     view.style.position = 'fixed';
-    view.style.bottom = '0';
+    view.style.bottom = '50px';
     view.style.left = '50%';
     view.style.display = 'none';
     view.style.transform = 'translateX(-50%)';
+    view.style.fontFamily = 'inherit';
+    view.style.fontSize = 'inherit';
+    view.style.borderRadius = '3px';
+    view.style.overflowY = 'auto';
 
-    view.style.background = styles.getPropertyValue("--readerSettings-theme")
-    view.style.color = styles.getPropertyValue("--readerSettings-textColor")
-    view.style.padding = styles.getPropertyValue("--readerSettings-padding")
-    view.style.marginBottom = styles.getPropertyValue("--readerSettings-padding")
-    view.style.fontSize = styles.getPropertyValue("--readerSettings-textSize")
-    view.style.fontFamily = styles.getPropertyValue("--readerSettings-fontFamily")
 
-    view.style.border = `4px solid ${styles.getPropertyValue("--readerSettings-textColor")}`;
+    view.style.background = styles.getPropertyValue("--readerSettings-theme") || '#292832'
+    view.style.color = styles.getPropertyValue("--readerSettings-textColor") || '#CCCCCC'
+    view.style.padding = styles.getPropertyValue("--readerSettings-padding") || '4px'
+    view.style.marginBottom = styles.getPropertyValue("--readerSettings-padding") || '4px'
+    view.style.border = `3px double ${styles.getPropertyValue("--readerSettings-textColor") || '#CCCCCC'}`;
 
     return view;
 }
